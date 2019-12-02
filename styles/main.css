@@ -1,21 +1,33 @@
 body{
-  background-color: cornsilk;
+  background-image: url('../Stars.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: greenyellow;
   text-align: center;
 }
 .favorites{
-  border: 1px black solid;
+  border: 1px white solid;
 }
 .searchList{
-  border: 1px black solid;
+  border: 1px white solid;
 }
 .dateResults{
-  border: 1px black solid;
+  border: 1px white solid;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .Results{
-  border: 1px black solid;
+  border: 1px white solid;
   padding: 2px;
   flex-basis: 40%;
+}
+
+.photolist{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mars{
+flex-basis: 20%;
 }
