@@ -1,21 +1,33 @@
 import { usePhotos } from "./MarsProbeData.js"
 import MarsComponent from "./Mars.js"
-
+const eventHub = document.querySelector(".container")
+const contentElement = document.querySelector(".MarsPhotos")
 
 const MarsProbeComponent = () => {
+
+  eventHub.addEventListener("click", clickEvent=>{
+if(clickEvent.target.classList.contains("tempbutton")){
+  console.log("working on it")
+  render()
+}
+
+
+
+  })
   
-  // Get a reference to the `<article class="content">` element
-  const contentElement = document.querySelector(".ProbePhoto")
-  const photographs = usePhotos()
-  
- 
-  contentElement.innerHTML += `
-      <section class="photoList">
+
+  const render = () => {
+    const photographs = usePhotos()
+    
+    contentElement.innerHTML += `
           ${photographs.map(
-            (pic) => {return MarsComponent(pic)}
-            ).join("")}
-      </section>
+      (pic) => { return MarsComponent(pic) }
+    ).join("")}
+    
   `
+
+  }
+
 }
 
 
